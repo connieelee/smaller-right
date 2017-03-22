@@ -42,6 +42,11 @@ describe('smallerRight', () => {
       });
     }
 
+    it('of size 50', () => {
+      const arr = randArrInRange(50, 0, 9);
+      expect(smaller(arr)).to.deep.equal(naiveSmallerSolution(arr));
+    });
+
     it('of size 500', () => {
       const arr = randArrInRange(500, -20, 20);
       expect(smaller(arr)).to.deep.equal(naiveSmallerSolution(arr));
@@ -52,8 +57,8 @@ describe('smallerRight', () => {
       expect(smaller(arr)).to.deep.equal(naiveSmallerSolution(arr));
     });
 
-    it('of size 30k', () => {
-      const arr = randArrInRange(30000, -20, 20);
+    it('of size 20k', () => {
+      const arr = randArrInRange(20000, -20, 20);
       expect(smaller(arr)).to.deep.equal(naiveSmallerSolution(arr));
     });
   });
